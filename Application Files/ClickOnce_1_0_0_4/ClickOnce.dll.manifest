@@ -4,7 +4,8 @@
   <description asmv2:iconFile="Scanner.ico" asmv2:publisher="Renovo, Inc." asmv2:product="Click Once" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <co.v1:customHostSpecified />
+    <assemblyIdentity name="Launcher" version="5.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Launcher.exe.deploy" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
   <trustInfo>
@@ -33,7 +34,7 @@
   <dependency>
     <dependentOS>
       <osVersionInfo>
-        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
       </osVersionInfo>
     </dependentOS>
   </dependency>
@@ -43,7 +44,7 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClickOnce.deploy" size="6656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ClickOnce.dll.deploy" size="6656">
       <assemblyIdentity name="ClickOnce" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
@@ -54,8 +55,20 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <dependency xmlns="urn:schemas-microsoft-com:asm.v1">
+    <dependentAssembly asmv2:dependencyType="install" asmv2:codebase="ClickOnce.dll.manifest" asmv2:size="4646">
+      <assemblyIdentity name="ClickOnce.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+      <hash xmlns="urn:schemas-microsoft-com:asm.v2">
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>X2BGsCnSyCQpjcGCisjMdDULycI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Launcher.deploy" size="14336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Launcher.exe.deploy" size="14336">
       <assemblyIdentity name="Launcher" version="5.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
@@ -73,6 +86,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>7D+93hvSRIKUySKtnZ8T1Cs4ESc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="ClickOnce.exe.deploy" size="142336">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>HfeOJR1prhHzoa0HRreDlmJGWzw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ClickOnce.runtimeconfig.json.deploy" size="154">
